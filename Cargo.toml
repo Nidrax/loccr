@@ -1,0 +1,26 @@
+[package]
+name = "loccr"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.89"
+license = "GPL-3.0-or-later"
+description = "LocCR: local commit review TUI"
+
+[dependencies]
+anyhow = "1.0.104"
+clap = { version = "4.6.7", features = ["derive"] }
+crossterm = "0.29.0"
+gix = { version = "0.88.0", features = ["revision", "blob-diff", "status", "dirwalk", "index", "attributes", "excludes", "worktree-mutation"] }
+ratatui = "0.30.2"
+serde = { version = "1.0.229", features = ["derive"] }
+syntect = { version = "5.3.0", default-features = false, features = ["default-fancy"] }
+thiserror = "2.0.21"
+time = { version = "0.3.55", features = ["formatting", "parsing", "macros", "serde"] }
+unicode-segmentation = "1.13.3"
+unicode-width = "0.2.2"
+yaml_serde = "0.10.7"
+
+[dev-dependencies]
+assert_cmd = "2.2.2"
+insta = "1.49.0"
+tempfile = "3.27.0"
